@@ -29,7 +29,7 @@ highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title/
 
 github_username: asamayam
-linkedin_username: arun-samayam
+linkedin_username: asamayam
 rss: rss
 
 defaults:
