@@ -30,3 +30,11 @@ ForEach ($thing in $things) {
     Write-Output "It highlights it using the GitHub style"
 }
 ```
+
+#### Screenshot Example
+
+Store screenshots in `/assets/images/` and reference them in markdown:
+
+```markdown
+![Architecture diagram](/assets/images/architecture.png)
+```
