@@ -6,6 +6,21 @@ url: "https://asamayam.github.io"
 
 theme: minima
 
+<<<<<<< HEAD
+=======
+#########################################################################################
+######### Nothing below needs to be changed (unless you know what you're doing) #########
+#########################################################################################
+theme: "minima"
+
+rss: rss
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    disable: false
+    
+>>>>>>> bc0194f3d3362ff17f90be8c78c9bf8719caaa74
 plugins:
   - jekyll-feed
   - jekyll-sitemap
