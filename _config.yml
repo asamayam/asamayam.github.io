@@ -1,42 +1,30 @@
 title: "Tech Bytes"
-author: "asamayam"
-description: "Technical blog posts" # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+author: "Arun Samayam"
+email: "samayamarun@gmail.com"
+description: "Practical notes on software engineering, architecture, cloud, data, and AI."
+url: "https://asamayam.github.io"
 
-# Email / Social media user names used by the minima theme:
-# All of these are optional and can be removed or commented out
-# email: "example@mail.com"
-# twitter_username: "twitteruser"
-# github_username: "githubuser"
-# linkedin_username: "linkedinuser"
-#facebook_username: username
-#flickr_username: username
-#instagram_username: username
-#pinterest_username: username
-#youtube_username: username
-#googleplus_username: +username
+theme: minima
 
-#########################################################################################
-######### Nothing below needs to be changed (unless you know what you're doing) #########
-#########################################################################################
-theme: "minima"
-
-rss: rss
-
-kramdown:
-  syntax_highlighter_opts:
-    disable: true
-    
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
-titles_from_headings:
-  strip_title: true
-  collections: true
+markdown: kramdown
+highlighter: rouge
+
+permalink: /:categories/:year/:month/:day/:title/
+
+github_username: asamayam
+linkedin_username: arun-samayam
+rss: rss
 
 defaults:
   - scope:
       path: ""
-      type: post
+      type: posts
     values:
-      tags: Other
+      layout: post
+      author: "Arun Samayam"
+      tags: Technical
