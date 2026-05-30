@@ -43,3 +43,15 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+
+.homepage-headshot-wrap {
+  text-align: center;
+  margin: 0 0 1.25rem;
+}
+
+.homepage-headshot {
+  width: min(300px, 72vw);
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
