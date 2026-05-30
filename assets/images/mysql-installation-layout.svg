@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="920" viewBox="0 0 960 920" role="img" aria-labelledby="title desc">
+  <title id="title">MySQL Installation Layout</title>
+  <desc id="desc">A reference diagram showing common MySQL installation paths for binaries, configuration, data, logs, service files, and libraries.</desc>
+  <rect width="960" height="920" fill="#ffffff"/>
+  <rect x="40" y="32" width="880" height="856" rx="24" fill="#f8fafc" stroke="#d0d7de" stroke-width="2"/>
+  <text x="480" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">MySQL Installation Layout</text>
+  <text x="480" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#475569">Common file system locations created or used during installation</text>
+
+  <g font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+    <rect x="72" y="160" width="392" height="64" rx="14" fill="#eaf2ff" stroke="#bfd3ff"/>
+    <text x="92" y="188" font-weight="700">Client programs and scripts</text>
+    <text x="92" y="210" fill="#0b3d91">/usr/bin</text>
+
+    <rect x="496" y="160" width="392" height="64" rx="14" fill="#eaf2ff" stroke="#bfd3ff"/>
+    <text x="516" y="188" font-weight="700">mysqld server</text>
+    <text x="516" y="210" fill="#0b3d91">/usr/sbin</text>
+
+    <rect x="72" y="240" width="392" height="64" rx="14" fill="#eefbf3" stroke="#b9e2c4"/>
+    <text x="92" y="268" font-weight="700">Configuration file</text>
+    <text x="92" y="290" fill="#166534">/etc/my.cnf</text>
+
+    <rect x="496" y="240" width="392" height="64" rx="14" fill="#eefbf3" stroke="#b9e2c4"/>
+    <text x="516" y="268" font-weight="700">Data directory</text>
+    <text x="516" y="290" fill="#166534">/var/lib/mysql</text>
+
+    <rect x="72" y="320" width="392" height="64" rx="14" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="92" y="348" font-weight="700">Error log file</text>
+    <text x="92" y="370" fill="#9a3412">/var/log/mysqld.log</text>
+
+    <rect x="496" y="320" width="392" height="64" rx="14" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="516" y="348" font-weight="700">secure_file_priv</text>
+    <text x="516" y="370" fill="#9a3412">/var/lib/mysql-files</text>
+
+    <rect x="72" y="400" width="392" height="64" rx="14" fill="#f5f3ff" stroke="#d8ccff"/>
+    <text x="92" y="428" font-weight="700">System V init script</text>
+    <text x="92" y="450" fill="#5b21b6">/etc/init.d/mysql</text>
+
+    <rect x="496" y="400" width="392" height="64" rx="14" fill="#f5f3ff" stroke="#d8ccff"/>
+    <text x="516" y="428" font-weight="700">Systemd service</text>
+    <text x="516" y="450" fill="#5b21b6">mysqld</text>
+
+    <rect x="72" y="480" width="392" height="64" rx="14" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="92" y="508" font-weight="700">Pid file</text>
+    <text x="92" y="530" fill="#991b1b">/var/run/mysql/mysqld.pid</text>
+
+    <rect x="496" y="480" width="392" height="64" rx="14" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="516" y="508" font-weight="700">Socket</text>
+    <text x="516" y="530" fill="#991b1b">/var/lib/mysql/mysql.sock</text>
+
+    <rect x="72" y="560" width="392" height="64" rx="14" fill="#ecfeff" stroke="#bae6fd"/>
+    <text x="92" y="588" font-weight="700">Keyring directory</text>
+    <text x="92" y="610" fill="#155e75">/vara/lib/mysql-keyring</text>
+
+    <rect x="496" y="560" width="392" height="64" rx="14" fill="#ecfeff" stroke="#bae6fd"/>
+    <text x="516" y="588" font-weight="700">Unix manual pages</text>
+    <text x="516" y="610" fill="#155e75">/usr/share/man</text>
+
+    <rect x="72" y="640" width="392" height="64" rx="14" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="92" y="668" font-weight="700">Include files</text>
+    <text x="92" y="690" fill="#166534">/usr/include/mysql</text>
+
+    <rect x="496" y="640" width="392" height="64" rx="14" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="516" y="668" font-weight="700">Libraries</text>
+    <text x="516" y="690" fill="#166534">/usr/lib/mysql</text>
+
+    <rect x="72" y="720" width="816" height="76" rx="14" fill="#f8fafc" stroke="#d0d7de"/>
+    <text x="92" y="750" font-weight="700">Miscellaneous support files</text>
+    <text x="92" y="776" fill="#334155">/usr/share/mysql</text>
+  </g>
+</svg>
