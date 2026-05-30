@@ -1,7 +1,7 @@
 ---
 title: "Essential MySQL Command-Line Utilities Every DBA Should Know - Part 2"
 description: "Part 2 covers the remaining MySQL utilities for backup, restore, binary log analysis, server safety, performance diagnostics, and benchmarking."
-date: 2025-07-09
+date: 2025-08-08
 categories: [Database]
 tags: [MySQL, MySQL Utilities, MySQL Administration, MySQL DBA, Linux Administration, Database Administration, Oracle MySQL, mysqldump, mysqlpump, mysqlbackup, mysqlbinlog, mysqlslap, mysqldumpslow, mysqld_safe, mysql_config]
 permalink: /posts/essential-mysql-command-line-utilities-part-2/

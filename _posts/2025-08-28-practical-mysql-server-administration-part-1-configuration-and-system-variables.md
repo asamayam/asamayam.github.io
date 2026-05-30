@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Server Administration - Part 1: Server Configuration and System Variables"
 description: "Part 1 covers MySQL server configuration basics, variable discovery, runtime changes, persisted settings, process inspection, and resource limits."
-date: 2025-08-05
+date: 2025-08-28
 categories: [Database]
 tags: [MySQL, MySQL Administration, mysqld, MySQL Configuration, System Variables, mysqladmin]
 permalink: /posts/practical-mysql-server-administration-part-1/

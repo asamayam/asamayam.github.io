@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Server Administration - Part 3: Data Dictionary and Server Logs"
 description: "Part 3 covers MySQL system tables, the data dictionary, object metadata categories, and the log files administrators use for troubleshooting and operational control."
-date: 2025-09-22
+date: 2025-10-08
 categories: [Database]
 tags: [MySQL, MySQL Administration, Data Dictionary, Server Logs, Error Log, Binary Log, Performance Schema]
 permalink: /posts/practical-mysql-server-administration-part-3/
