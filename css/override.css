@@ -45,13 +45,21 @@ hr {
 }
 
 .homepage-headshot-wrap {
-  text-align: center;
-  margin: 0 0 1.25rem;
+  float: left;
+  margin: 0 1rem 0.75rem 0;
 }
 
 .homepage-headshot {
-  width: min(300px, 72vw);
+  width: min(180px, 42vw);
   height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 640px) {
+  .homepage-headshot-wrap {
+    float: none;
+    text-align: center;
+    margin: 0 0 1rem;
+  }
 }
