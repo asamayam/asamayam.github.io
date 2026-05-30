@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Tablespace and Partitioning - Part 3: Managing UNDO and Temporary Tablespaces"
 description: "Part 3 covers relocating UNDO tablespaces and controlling InnoDB temporary tablespace growth with configuration-driven operational steps."
-date: 2026-03-06
+date: 2025-12-15
 categories: [Database]
 tags: [MySQL, InnoDB, UNDO Tablespace, Temporary Tablespace, innodb_undo_directory, MySQL Administration]
 permalink: /posts/practical-mysql-tablespace-and-partitioning-part-3/

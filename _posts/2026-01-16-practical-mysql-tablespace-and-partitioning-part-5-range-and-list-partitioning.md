@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Tablespace and Partitioning - Part 5: RANGE and LIST Partitioning"
 description: "Part 5 introduces RANGE and LIST partitioning with hands-on examples, partition-boundary errors, and maintenance patterns such as MAXVALUE partitions."
-date: 2026-04-23
+date: 2026-01-16
 categories: [Database]
 tags: [MySQL, Partitioning, RANGE Partitioning, LIST Partitioning, MySQL Administration, Database Performance]
 permalink: /posts/practical-mysql-tablespace-and-partitioning-part-5/

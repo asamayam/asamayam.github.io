@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Server Administration - Part 4: Startup, Shutdown, and Connection Management"
 description: "Part 4 covers starting and stopping MySQL safely, authentication behavior, local versus remote connections, host-based accounts, and practical connection management examples."
-date: 2025-10-29
+date: 2025-09-17
 categories: [Database]
 tags: [MySQL, MySQL Administration, systemctl, mysqladmin, Connection Management, User Management]
 permalink: /posts/practical-mysql-server-administration-part-4/

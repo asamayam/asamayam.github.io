@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Server Administration - Part 7: Running Multiple MySQL Instances on One Host"
 description: "Part 7 covers running multiple MySQL instances on one server, validating ports and sockets, checking instance health, and managing instances with mysqld_multi."
-date: 2025-12-28
+date: 2025-11-01
 categories: [Database]
 tags: [MySQL, MySQL Administration, mysqld_multi, Multiple Instances, mysqladmin, Linux Administration]
 permalink: /posts/practical-mysql-server-administration-part-7/

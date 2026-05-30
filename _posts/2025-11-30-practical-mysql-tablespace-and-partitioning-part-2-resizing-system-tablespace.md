@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Tablespace and Partitioning - Part 2: Resizing the InnoDB System Tablespace"
 description: "Part 2 walks through safe methods to grow the InnoDB system tablespace, including autoextend strategy, data-file additions, and pre-change shutdown checks."
-date: 2026-02-12
+date: 2025-11-30
 categories: [Database]
 tags: [MySQL, InnoDB, Tablespaces, System Tablespace, innodb_data_file_path, MySQL Administration]
 permalink: /posts/practical-mysql-tablespace-and-partitioning-part-2/

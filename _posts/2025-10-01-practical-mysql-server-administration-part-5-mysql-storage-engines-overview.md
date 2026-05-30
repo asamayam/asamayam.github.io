@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Server Administration - Part 5: MySQL Storage Engines Overview"
 description: "Part 5 introduces the MySQL storage engine architecture, explains transactional and non-transactional engines, and shows where different engines fit operationally."
-date: 2025-11-18
+date: 2025-10-01
 categories: [Database]
 tags: [MySQL, MySQL Administration, Storage Engines, InnoDB, MyISAM, MEMORY, CSV, ARCHIVE]
 permalink: /posts/practical-mysql-server-administration-part-5/

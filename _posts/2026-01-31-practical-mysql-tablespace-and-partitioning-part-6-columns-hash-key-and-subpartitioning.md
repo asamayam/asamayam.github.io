@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Tablespace and Partitioning - Part 6: COLUMNS, HASH, KEY, and Subpartitioning"
 description: "Part 6 covers advanced partitioning patterns in MySQL, including COLUMNS, HASH, KEY, and composite subpartitioning with verification workflows."
-date: 2026-05-18
+date: 2026-01-31
 categories: [Database]
 tags: [MySQL, Partitioning, COLUMNS Partitioning, HASH Partitioning, KEY Partitioning, Subpartitioning, MySQL Administration]
 permalink: /posts/practical-mysql-tablespace-and-partitioning-part-6/

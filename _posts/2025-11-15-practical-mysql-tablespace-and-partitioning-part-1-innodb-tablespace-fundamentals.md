@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Tablespace and Partitioning - Part 1: InnoDB Tablespace Fundamentals"
 description: "Part 1 introduces InnoDB tablespace concepts in MySQL 8.0 and explains how system, file-per-table, general, undo, and temporary tablespaces map to physical storage."
-date: 2026-01-19
+date: 2025-11-15
 categories: [Database]
 tags: [MySQL, InnoDB, Tablespaces, MySQL Administration, Database Administration]
 permalink: /posts/practical-mysql-tablespace-and-partitioning-part-1/

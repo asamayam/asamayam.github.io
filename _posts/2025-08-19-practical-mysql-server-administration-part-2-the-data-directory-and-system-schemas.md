@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Server Administration - Part 2: The Data Directory and System Schemas"
 description: "Part 2 covers the MySQL data directory, key files under datadir, generated SSL artifacts, binary log rollover, and the core system schemas administrators should recognize."
-date: 2025-09-18
+date: 2025-08-19
 categories: [Database]
 tags: [MySQL, MySQL Administration, Data Directory, InnoDB, Binary Logs, System Schemas]
 permalink: /posts/practical-mysql-server-administration-part-2/

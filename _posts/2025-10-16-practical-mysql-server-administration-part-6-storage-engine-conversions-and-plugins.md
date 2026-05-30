@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Server Administration - Part 6: Storage Engine Conversions and Plugins"
 description: "Part 6 covers creating tables with different storage engines, observing on-disk file layout, converting engines, understanding conversion errors, and loading an engine plugin."
-date: 2025-12-08
+date: 2025-10-16
 categories: [Database]
 tags: [MySQL, MySQL Administration, Storage Engines, InnoDB, MyISAM, CSV, MEMORY, Plugins]
 permalink: /posts/practical-mysql-server-administration-part-6/

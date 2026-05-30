@@ -1,7 +1,7 @@
 ---
 title: "Essential MySQL Command-Line Utilities Every DBA Should Know - Part 1"
 description: "Part 1 covers core MySQL command-line utilities for interactive administration, quick validation, metadata inspection, integrity checks, and secure credential handling."
-date: 2025-07-18
+date: 2025-07-02
 categories: [Database]
 tags: [MySQL, MySQL Utilities, MySQL Administration, MySQL DBA, Linux Administration, Database Administration, Oracle MySQL]
 permalink: /posts/essential-mysql-command-line-utilities/

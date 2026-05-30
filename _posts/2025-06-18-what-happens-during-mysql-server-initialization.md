@@ -1,7 +1,7 @@
 ---
 title: "What Happens During MySQL Server Initialization?"
 description: "Understand what happens during the first startup of a MySQL server, including data directory creation, InnoDB initialization, SSL certificate generation, system schema creation, and temporary root password setup."
-date: 2025-06-28
+date: 2025-06-18
 categories: [Database]
 tags: [MySQL, MySQL Administration, Oracle MySQL, InnoDB, Performance Schema, Linux Administration, Database Administration, MySQL DBA]
 permalink: /posts/mysql-server-initialization/

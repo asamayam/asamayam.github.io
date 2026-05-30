@@ -1,7 +1,7 @@
 ---
 title: "Practical MySQL Tablespace and Partitioning - Part 4: File-per-Table and General Tablespaces"
 description: "Part 4 demonstrates file-per-table and general tablespace operations, including external tablespace paths, table moves, and key constraints for partitioned tables."
-date: 2026-03-30
+date: 2026-01-02
 categories: [Database]
 tags: [MySQL, InnoDB, File-per-Table, General Tablespace, innodb_directories, MySQL Administration]
 permalink: /posts/practical-mysql-tablespace-and-partitioning-part-4/
