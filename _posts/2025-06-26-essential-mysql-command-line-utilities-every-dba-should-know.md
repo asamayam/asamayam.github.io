@@ -1,6 +1,6 @@
 ---
-title: "Essential MySQL Command-Line Utilities Every DBA Should Know"
-description: "A practical walkthrough of core MySQL command-line utilities for administration, validation, troubleshooting, and secure automation."
+title: "Essential MySQL Command-Line Utilities Every DBA Should Know - Part 1"
+description: "Part 1 covers core MySQL command-line utilities for interactive administration, quick validation, metadata inspection, integrity checks, and secure credential handling."
 date: 2025-06-26
 categories: [Database]
 tags: [MySQL, MySQL Utilities, MySQL Administration, MySQL DBA, Linux Administration, Database Administration, Oracle MySQL]
@@ -10,6 +10,8 @@ permalink: /posts/essential-mysql-command-line-utilities/
 One of the reasons I've always enjoyed working with MySQL is the rich collection of command-line utilities that are included with the installation. While most administrators spend a significant amount of time inside the MySQL client itself, there are several supporting utilities that simplify administration, troubleshooting, validation, and automation.
 
 After installing MySQL, one of the first things I typically do is review the utilities available on the server.
+
+This is Part 1 of a two-part utilities series.
 
 On Linux systems, these utilities are usually installed under:
 
@@ -377,14 +379,4 @@ The five utilities covered in this article are among the ones I use most frequen
 
 Mastering these utilities can significantly improve efficiency when managing MySQL environments and often eliminates the need for repetitive manual tasks.
 
-In the next article, I'll look at another group of MySQL utilities focused on backup, recovery, performance analysis, and benchmarking.
-
-## Tags
-
-MySQL
-MySQL Utilities
-MySQL Administration
-MySQL DBA
-Linux Administration
-Database Administration
-Oracle MySQL
+In Part 2, I cover the remaining MySQL utilities focused on backup and restore operations, binary log analysis, server safety, and performance diagnostics.
