@@ -6,8 +6,6 @@ categories: [Database]
 tags: [MySQL, Oracle MySQL, MySQL Installation, Database Administration, MySQL DBA, MySQL Community Edition]
 ---
 
-## Installing MySQL Community Server on Oracle Linux Using the MySQL Repository
-
 **Description**
 
 Learn how to install MySQL Community Server on Oracle Linux using the official MySQL repository. This step-by-step guide covers repository configuration, package installation, service startup, password management, and security hardening.
@@ -62,6 +60,7 @@ Example:
 ```text
 -rw-r--r-- 1 root root 11472 mysql80-community-release-el7-10.noarch.rpm
 ```
+
 Please see below for the terminal output:
 
 ```console
@@ -123,7 +122,9 @@ mysql-connectors-community
 mysql-tools-community
 mysql80-community
 ```
+
 Please see below for the terminal output:
+
 ```console
 [root@mysql-s mysql_binaries]# sudo yum install mysql80-community-release-el7-9.noarch.rpm
 
@@ -217,7 +218,9 @@ The installation pulls in several components including:
 * mysql-community-common
 * mysql-community-client-plugins
 * mysql-community-libs
+
 Please see below for the terminal output:
+
 ```console
 [root@mysql-s mysql_binaries]# sudo yum install mysql-community-server
 
@@ -317,7 +320,9 @@ Next, verify the service status.
 ```bash
 systemctl status mysqld
 ```
+
 Please see below for the terminal output:
+
 ```console
 [root@mysql-s mysql_binaries]# systemctl start mysqld
 
@@ -376,7 +381,9 @@ IDENTIFIED BY 'XXXXXXX';
 Choose a password that complies with your organization's password policy.
 
 A successful password change confirms that the installation and initialization completed correctly.
+
 Please see below for the terminal output:
+
 ```console
 [root@mysql-s mysql_binaries]# sudo grep 'temporary password' /var/log/mysqld.log
 
@@ -405,7 +412,9 @@ The utility guides you through several security-related tasks, including:
 * Restricting remote root access
 * Removing the test database
 * Reloading privilege tables
+
 Please see below for the terminal output:
+
 ```console
 [root@mysql-s mysql]# mysql_secure_installation
 
@@ -474,10 +483,12 @@ All done!
 
 Although many administrators skip this step in development environments, I recommend including it in every installation checklist.
 
-## Verify the MySQL configuration file.
+## Verify the MySQL Configuration File
 
-The MySQL configuration file is located at /etc/my.cnf by default.
+The MySQL configuration file is located at `/etc/my.cnf` by default.
+
 Please see below for the terminal output:
+
 ```console
 [root@mysql-s mysql_binaries]# cat /etc/my.cnf
 
@@ -530,7 +541,9 @@ mysql
 performance_schema
 sys
 ```
+
 Please see below for the terminal output:
+
 ```console
 [root@mysql-s mysql]# su - mysql
 

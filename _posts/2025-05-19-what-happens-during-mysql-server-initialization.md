@@ -7,8 +7,6 @@ tags: [MySQL, MySQL Administration, Oracle MySQL, InnoDB, Performance Schema, Li
 permalink: /posts/mysql-server-initialization/
 ---
 
-# What Happens During MySQL Server Initialization?
-
 When most administrators install MySQL on Linux, the focus is usually on getting the server up and running as quickly as possible. Once the installation completes and the `mysqld` service starts successfully, the work often shifts to creating databases, users, and application schemas.
 
 However, the first startup of a MySQL server is one of the most important phases in the lifecycle of a database environment.
