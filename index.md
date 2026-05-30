@@ -1,9 +1,10 @@
 ---
 layout: home
-title: Home
 ---
 
-## Introduction
+<p class="homepage-headshot-wrap">
+	<img class="homepage-headshot" src="/assets/images/arun-samayam-headshot.jpeg" alt="Professional headshot of Arun Samayam">
+</p>
 
 Arun Samayam is a Principal Cloud Solutions Architect, author, and speaker focused on building secure, scalable, and practical enterprise platforms.
 
