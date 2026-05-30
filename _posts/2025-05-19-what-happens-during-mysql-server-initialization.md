@@ -1,7 +1,7 @@
 ---
 title: "What Happens During MySQL Server Initialization?"
 description: "Understand what happens during the first startup of a MySQL server, including data directory creation, InnoDB initialization, SSL certificate generation, system schema creation, and temporary root password setup."
-date: 2025-07-01
+date: 2025-05-19
 categories: [Database]
 tags: [MySQL, MySQL Administration, Oracle MySQL, InnoDB, Performance Schema, Linux Administration, Database Administration, MySQL DBA]
 permalink: /posts/mysql-server-initialization/
@@ -19,8 +19,6 @@ Understanding what happens behind the scenes during this process can help DBAs t
 
 In this article, I'll walk through the key activities performed by MySQL during its first startup on a Linux server.
 
----
-
 ## The First Startup Process
 
 After installing MySQL packages, the service is typically started using:
@@ -33,29 +31,16 @@ At first glance, the command appears simple. Behind the scenes, however, MySQL p
 
 The process can be visualized as follows:
 
-<div style="max-width: 420px; margin: 1.5rem auto; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-  <div style="padding: 0.85rem 1rem; border: 1px solid #d0d7de; border-radius: 10px; background: #f6f8fa; font-weight: 600;">Install Packages</div>
-  <div style="font-size: 1.4rem; line-height: 1.2; color: #57606a; margin: 0.35rem 0;">↓</div>
-  <div style="padding: 0.85rem 1rem; border: 1px solid #d0d7de; border-radius: 10px; background: #f6f8fa; font-weight: 600;">Start mysqld</div>
-  <div style="font-size: 1.4rem; line-height: 1.2; color: #57606a; margin: 0.35rem 0;">↓</div>
-  <div style="padding: 0.85rem 1rem; border: 1px solid #d0d7de; border-radius: 10px; background: #f6f8fa; font-weight: 600;">Initialize Data Directory</div>
-  <div style="font-size: 1.4rem; line-height: 1.2; color: #57606a; margin: 0.35rem 0;">↓</div>
-  <div style="padding: 0.85rem 1rem; border: 1px solid #d0d7de; border-radius: 10px; background: #f6f8fa; font-weight: 600;">Generate SSL Certificates</div>
-  <div style="font-size: 1.4rem; line-height: 1.2; color: #57606a; margin: 0.35rem 0;">↓</div>
-  <div style="padding: 0.85rem 1rem; border: 1px solid #d0d7de; border-radius: 10px; background: #f6f8fa; font-weight: 600;">Create System Schemas</div>
-  <div style="font-size: 1.4rem; line-height: 1.2; color: #57606a; margin: 0.35rem 0;">↓</div>
-  <div style="padding: 0.85rem 1rem; border: 1px solid #d0d7de; border-radius: 10px; background: #f6f8fa; font-weight: 600;">Create Root Account</div>
-  <div style="font-size: 1.4rem; line-height: 1.2; color: #57606a; margin: 0.35rem 0;">↓</div>
-  <div style="padding: 0.85rem 1rem; border: 1px solid #d0d7de; border-radius: 10px; background: #f6f8fa; font-weight: 600;">Generate Temporary Password</div>
-  <div style="font-size: 1.4rem; line-height: 1.2; color: #57606a; margin: 0.35rem 0;">↓</div>
-  <div style="padding: 0.85rem 1rem; border: 1px solid #1f6feb; border-radius: 10px; background: #eaf2ff; font-weight: 700; color: #0b3d91;">Server Ready</div>
-</div>
-
-<p style="text-align: center; font-size: 0.95rem; color: #57606a; margin-top: -0.5rem;"><em>Figure 1: High-level flow of MySQL server initialization during first startup.</em></p>
+1. Install packages
+2. Start `mysqld`
+3. Initialize the data directory
+4. Generate SSL certificates
+5. Create system schemas
+6. Create the root account
+7. Generate a temporary password
+8. Bring the server online
 
 If any of these steps fail, the startup process may terminate and require investigation using the MySQL error log.
-
----
 
 ## Creating the Data Directory
 
@@ -106,8 +91,6 @@ pid-file=/var/run/mysqld/mysqld.pid
 ```
 
 > This output confirms the default MySQL data directory, socket location, and error log path used during server initialization.
-
----
 
 ## Initializing InnoDB System Files
 
@@ -181,11 +164,25 @@ drwxr-x--- 2 mysql mysql     4096 Aug 29 19:54 #innodb_redo
 
 Here is the MySQL installation layout for reference:
 
-![MySQL installation layout](/assets/images/mysql-installation-layout.svg)
+| Component | Location |
+| --- | --- |
+| Client programs and scripts | `/usr/bin` |
+| `mysqld` server | `/usr/sbin` |
+| Configuration file | `/etc/my.cnf` |
+| Data directory | `/var/lib/mysql` |
+| Error log file | `/var/log/mysqld.log` |
+| `secure_file_priv` | `/var/lib/mysql-files` |
+| System V init script | `/etc/init.d/mysql` |
+| Systemd service | `mysqld` |
+| Pid file | `/var/run/mysql/mysqld.pid` |
+| Socket | `/var/lib/mysql/mysql.sock` |
+| Keyring directory | `/var/lib/mysql-keyring` |
+| Unix manual pages | `/usr/share/man` |
+| Include files | `/usr/include/mysql` |
+| Libraries | `/usr/lib/mysql` |
+| Miscellaneous support files | `/usr/share/mysql` |
 
-<p style="text-align: center; font-size: 0.95rem; color: #57606a; margin-top: -0.5rem;"><em>Figure 2: Common MySQL installation paths for binaries, configuration, data files, logs, and service components.</em></p>
-
----
+> This table summarizes the default MySQL installation paths for server binaries, configuration, runtime files, libraries, and supporting components.
 
 ## Generating SSL Certificates
 
@@ -210,8 +207,6 @@ ls -l *.pem
 ```
 
 For development environments, the automatically generated certificates are usually sufficient. Production environments often replace them with certificates issued by an internal Certificate Authority (CA).
-
----
 
 ## Creating the System Schemas
 
@@ -285,8 +280,6 @@ mysql> show databases;
 
 > This output confirms that MySQL created the core internal schemas required for metadata, user management, instrumentation, and administrative views.
 
----
-
 ## Creating the Root Account
 
 Another critical initialization task is creating the MySQL root account.
@@ -302,8 +295,6 @@ This account is intended for administrative operations and initially requires th
 Unlike older MySQL releases, remote root access is not enabled by default.
 
 This provides an additional layer of security for new installations.
-
----
 
 ## Generating the Temporary Root Password
 
@@ -335,8 +326,6 @@ Please see below for the terminal output:
 
 > This log entry confirms that MySQL generated the initial administrative credential during startup. The temporary password should be used only for first login and changed immediately.
 
----
-
 ## Initializing Binary Logging
 
 If binary logging is enabled, MySQL also creates the initial binary log files during startup.
@@ -355,8 +344,6 @@ Binary logs record database changes and play a critical role in:
 * Auditing database activity
 
 Although many administrators associate binary logging with replication, it is equally important for backup and recovery strategies.
-
----
 
 ## Reviewing the Error Log
 
@@ -390,8 +377,6 @@ The error log often provides immediate insight into:
 
 Developing a habit of reviewing the error log after installation can save considerable troubleshooting time later.
 
----
-
 ## Common Initialization Issues
 
 Some of the most common startup problems I encounter include:
@@ -413,8 +398,6 @@ Another database service may already be listening on port 3306.
 Invalid parameters in `my.cnf` can prevent successful startup.
 
 Fortunately, most of these issues are quickly identified by reviewing the error log.
-
----
 
 ## Final Thoughts
 
