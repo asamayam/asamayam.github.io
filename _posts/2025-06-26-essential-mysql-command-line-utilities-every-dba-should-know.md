@@ -30,7 +30,7 @@ mysqlbinlog
 mysqlslap
 ```
 
-Chapter output example from `/usr/bin`:
+Example terminal output:
 
 ```console
 [root@mysqlhost bin]# pwd
@@ -67,6 +67,8 @@ Chapter output example from `/usr/bin`:
 -rwxr-xr-x 1 root root  7387664 Jun 22 05:47 mysql_secure_installation
 -rwxr-xr-x 1 root root  8026184 Jun 22 05:47 mysqlpump
 ```
+
+> This listing confirms that the core MySQL CLI utilities are available under `/usr/bin`.
 
 In this article, I'll focus on five utilities that I use regularly when administering MySQL environments.
 
@@ -115,10 +117,6 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 ### Why It Matters
 
 The `mysql` client remains the fastest way to perform administrative operations, validate configuration changes, and troubleshoot problems directly on the server.
-
-### Screenshot Placement
-
-The chapter image set does not include a dedicated `mysql -uroot -p` terminal screenshot, so this slot can be filled when you provide the next screenshot batch.
 
 ## 2. mysqladmin - Quick Server Health Checks
 
@@ -177,7 +175,7 @@ Database: test
 +----------------------+
 ```
 
-Terminal output from the chapter:
+Example terminal output:
 
 ```console
 [root@mysqlhost01 ~]# mysqlshow test -uroot -p
@@ -205,6 +203,8 @@ Database: test
 +------------------------------------------------------+
 ```
 
+> This output provides a fast inventory of tables in the `test` schema without entering the interactive MySQL shell.
+
 You can also inspect a specific table:
 
 ```bash
@@ -226,6 +226,8 @@ Database: test  Table: example
 +-----------------------+---------------+--------------------+------+
 ```
 
+> This output is useful when you need table metadata quickly during troubleshooting or validation.
+
 This displays:
 
 - Column names
@@ -236,10 +238,6 @@ This displays:
 ### Why It Matters
 
 I frequently use `mysqlshow` when I need quick metadata without connecting interactively and executing multiple SQL statements.
-
-### Screenshot Placement
-
-The chapter image set does not include a dedicated `mysqlshow` screenshot, so this slot can be filled when you provide the next screenshot batch.
 
 ## 4. mysqlcheck - Validating Table Health
 
@@ -267,7 +265,7 @@ test.EMPLOYEE1 OK
 test.TESTTABLE1 OK
 ```
 
-Terminal output from the chapter:
+Example terminal output:
 
 ```console
 [root@mysqlhost01 ~]# /usr/bin/mysqlcheck --databases test -uroot -p
@@ -279,6 +277,8 @@ test.TESTTABLE1                                    OK
 test.employee_table                                OK
 ```
 
+> The `OK` status indicates each table check completed successfully with no immediate integrity issues detected.
+
 The `OK` status indicates that the objects were successfully checked and no issues were detected.
 
 ### Common Use Cases
@@ -289,10 +289,6 @@ I typically use `mysqlcheck` after:
 - Storage failures
 - Filesystem issues
 - Database migrations
-
-### Screenshot Placement
-
-The chapter image set does not include a dedicated `mysqlcheck` screenshot, so this slot can be filled when you provide the next screenshot batch.
 
 ## 5. mysql_config_editor - Eliminating Plain Text Passwords
 
@@ -330,7 +326,7 @@ Connections can then be established using:
 mysql --login-path=backupUser
 ```
 
-Terminal output from the chapter:
+Example terminal output:
 
 ```console
 [root@mysqlhost ~]# mysql_config_editor set --login-path=backupUser --host=localhost --user=root --password
@@ -352,6 +348,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql>
 ```
 
+> This sequence demonstrates creating a secure login path and then connecting without exposing credentials on the command line.
+
 ### Why It Matters
 
 Benefits include:
@@ -362,20 +360,6 @@ Benefits include:
 - Cleaner backup scripts
 
 This utility has become one of my preferred methods for securing automated MySQL administration tasks.
-
-### Screenshot Placement
-
-The chapter image set does not include a dedicated `mysql_config_editor` screenshot, so this slot can be filled when you provide the next screenshot batch.
-
-## Chapter Figures
-
-The attached chapter document includes the following screenshots:
-
-![Figure 2.1: MySQL Workbench download page.](/assets/images/mysql-utilities/figure-2-1-workbench-download-page.png)
-
-![Figure 2.2: MySQL Workbench installation completion screen.](/assets/images/mysql-utilities/figure-2-2-workbench-install-complete.png)
-
-![Figure 2.3: MySQL Workbench setup new connection screen.](/assets/images/mysql-utilities/figure-2-3-workbench-setup-connection.png)
 
 ## Final Thoughts
 
