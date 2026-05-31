@@ -1,10 +1,10 @@
 ---
-title: "Practical MySQL Backup Workflows: mysqldump, mydumper, and XtraBackup"
-description: "A practical guide to MySQL backup and restore workflows using mysqldump, mydumper/myloader, and Percona XtraBackup, with examples for single databases, selective tables, compression, and recovery preparation."
+title: "Practical MySQL Backup Utilities: mysqldump, mydumper, and XtraBackup"
+description: "A practical guide to MySQL backup and restore utilities using mysqldump, mydumper/myloader, and Percona XtraBackup, with examples for single databases, selective tables, compression, and recovery preparation."
 date: 2026-04-12
 categories: [Database]
 tags: [MySQL, Backup, Restore, mysqldump, mydumper, myloader, XtraBackup, Database Administration]
-permalink: /posts/practical-mysql-backup-workflows/
+permalink: /posts/practical-mysql-backup-utilities/
 ---
 
 This article pulls the Chapter 8 material into one operational guide instead of splitting it into a series.
