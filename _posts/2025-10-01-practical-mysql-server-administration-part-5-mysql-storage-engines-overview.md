@@ -83,7 +83,7 @@ For most general-purpose production workloads, choose `InnoDB` because it suppor
 
 ## Match Engines to Use Cases
 
-The chapter content maps common engines to typical usage patterns:
+This post maps common engines to typical usage patterns:
 
 - `InnoDB` for transaction-heavy OLTP workloads
 - `MyISAM` for older or read-oriented use cases

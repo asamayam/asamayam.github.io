@@ -118,4 +118,4 @@ This pattern improves scalability, but it does not automatically solve failover 
 
 Still, for read scaling and faster replica provisioning, clone plus GTID-based chained replication is a practical and effective pattern.
 
-This closes the Chapter 5 series. The next natural step is to move from replication and scale-out into the higher-level MySQL HA patterns built on top of them.
+This closes this replication series. The next natural step is to move from replication and scale-out into the higher-level MySQL HA patterns built on top of them.

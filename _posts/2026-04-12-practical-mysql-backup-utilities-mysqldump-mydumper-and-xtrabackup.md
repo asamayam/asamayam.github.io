@@ -7,7 +7,7 @@ tags: [MySQL, Backup, Restore, mysqldump, mydumper, myloader, XtraBackup, Databa
 permalink: /posts/practical-mysql-backup-utilities/
 ---
 
-This article pulls the Chapter 8 material into one operational guide instead of splitting it into a series.
+This article pulls the source material into one operational guide instead of splitting it into a series.
 
 Production MySQL teams often start serious backup planning only after the first restore request arrives. Start earlier. Build a usable backup process around three elements: a tool that fits the workload, a repeatable command pattern, and a restore procedure you have already verified.
 

@@ -7,7 +7,7 @@ tags: [MySQL, Partitioning, COLUMNS Partitioning, HASH Partitioning, KEY Partiti
 permalink: /posts/practical-mysql-tablespace-and-partitioning-part-6/
 ---
 
-Part 6 closes the Chapter 4 series with advanced partitioning patterns.
+Part 6 closes this partitioning series with advanced partitioning patterns.
 
 These methods are useful when RANGE/LIST alone do not match the distribution characteristics of your workload.
 
@@ -110,11 +110,11 @@ WHERE table_name='emp_subpart';
 
 ## Operational Wrap-Up
 
-Across this chapter, the most useful pattern is consistent verification after each DDL change:
+Across this post, the most useful pattern is consistent verification after each DDL change:
 
 - `information_schema.partitions`
 - `information_schema.files`
 - `SHOW VARIABLES` checks
 - `EXPLAIN` for partition-aware query behavior
 
-This closes the practical tablespace and partitioning series. In the next chapter flow, I move to high availability and replication topics.
+This closes the practical tablespace and partitioning series. In the next post flow, I move to high availability and replication topics.

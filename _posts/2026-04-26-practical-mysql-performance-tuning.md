@@ -39,7 +39,7 @@ Database performance depends on hardware resources and configuration together.
 
 ### CPU
 
-CPU throughput affects concurrency, parsing, and execution speed. The chapter uses systems ranging from a handful of cores to larger deployments with many more. The right CPU choice depends on the transaction rate, query complexity, and the amount of parallel work the application generates.
+CPU throughput affects concurrency, parsing, and execution speed. This guide uses systems ranging from a handful of cores to larger deployments with many more. The right CPU choice depends on the transaction rate, query complexity, and the amount of parallel work the application generates.
 
 ### Memory
 
@@ -74,7 +74,7 @@ SHOW VARIABLES LIKE 'innodb_dedicated_server';
 
 InnoDB buffer pool tuning ranks among the most important performance settings. A larger buffer pool keeps data and index pages in memory and reduces physical I/O.
 
-In practice, the chapter recommends assigning a large share of server memory to the buffer pool on dedicated database hosts.
+In practice, this guide recommends assigning a large share of server memory to the buffer pool on dedicated database hosts.
 
 ```ini
 [mysqld]
@@ -161,7 +161,7 @@ SHOW VARIABLES LIKE 'join_buffer_size';
 
 ### `read_buffer_size`
 
-This setting matters less for InnoDB than for MyISAM, but the chapter includes it as part of the broader tuning review.
+This setting matters less for InnoDB than for MyISAM, but this guide includes it as part of the broader tuning review.
 
 ```sql
 SHOW VARIABLES LIKE 'read_buffer_size';
@@ -169,7 +169,7 @@ SHOW VARIABLES LIKE 'read_buffer_size';
 
 ## Use a Practical Baseline Configuration
 
-The chapter gives two example configurations: one for dedicated servers and one for systems that do not dedicate all resources to MySQL.
+This guide gives two example configurations: one for dedicated servers and one for systems that do not dedicate all resources to MySQL.
 
 On dedicated MySQL servers, allocate resources so InnoDB can use the machine effectively.
 
@@ -272,7 +272,7 @@ That schema gives you the raw material for spotting lock contention, hot stateme
 
 ## Use Maintenance Tools Carefully
 
-The chapter treats maintenance tools as targeted utilities, not as blanket fixes.
+This guide treats maintenance tools as targeted utilities, not as blanket fixes.
 
 Run maintenance tools during non-peak hours because some operations take locks or pause writes.
 
@@ -294,7 +294,7 @@ Use it after large DML changes or when execution plans no longer match reality.
 OPTIMIZE TABLE EMPLOYEE1;
 ```
 
-The chapter shows the common MySQL behavior where InnoDB may recreate and analyze the table instead of performing a classic optimization path.
+This guide shows the common MySQL behavior where InnoDB may recreate and analyze the table instead of performing a classic optimization path.
 
 ### `CHECK TABLE`
 
@@ -310,7 +310,7 @@ Use it when you suspect corruption, compatibility issues, or index problems.
 
 Performance work often depends on understanding table size, row estimates, and index footprint.
 
-The chapter uses `information_schema.INNODB_TABLESTATS` to inspect statistics for a table:
+This guide uses `information_schema.INNODB_TABLESTATS` to inspect statistics for a table:
 
 ```sql
 SELECT *
